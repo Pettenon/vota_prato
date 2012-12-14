@@ -1,0 +1,32 @@
+
+  resources :restaurantes
+
+
+  resources :qualificacoes
+
+
+  resources :clientes
+
+
+  resources :comentarios
+
+
+  resources :comentarios do
+    member do
+      post :desabilita
+    end
+  # url: /comentarios/:id/desabilita
+  # named_route: desabilita_comentario_path
+  end
+
+  resources :comentarios do
+    collection do
+      get :feed
+    end
+  # url: /comentarios/feed
+  # named_route: feed_comentarios_path
+  end
+
+  resources :restaurantes do
+    resources :qualificacoes
+  end
