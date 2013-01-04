@@ -15,9 +15,9 @@
     <td><%= comentario.conteudo %></td>
     <td><%= comentario.comentavel_id %></td>
     <td><%= comentario.comentavel_type %></td>
-    <td><%= link_to 'Show', comentario %></td>
-    <td><%= link_to 'Edit', edit_comentario_path(comentario) %></td>
-    <td><%= link_to 'Destroy', comentario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Mostrar', comentario %></td>
+    <td><%= link_to 'Editar', edit_comentario_path(comentario) %></td>
+    <td><%= link_to 'Remover', comentario, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
   </tr>
 <% end %>
 </table>

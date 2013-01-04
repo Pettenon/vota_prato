@@ -11,6 +11,13 @@
 
 <% end %>
 
+<!-- Adicionar arquivo no cadastro de restaurante-->
+<%= form_for :restaurantes, :url => {:action => 'create'}, :html => {:multipart => true} do |f| %>
+
+<%= f.file_field :foto %>
+<% end %>
+
+
 <%= form_for :restaurante, url: {action: 'update', id: @restaurante} do |f| %>
 	Nome: <%= f.text_field :nome %><br/>
 	Endereço: <%= f.text_field :endereco %><br/>

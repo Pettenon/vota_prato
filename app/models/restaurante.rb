@@ -3,6 +3,9 @@
 class Restaurante < ActiveRecord::Base
   attr_accessible :nome, :endereco, :especialidade
 
+  
+    has_attached_file :foto, :styles => { :medium => "300x300", :thumb => "100x100"}
+
   validates_presence_of :nome, message: "deve ser preenchido"
   validates_presence_of :endereco, message: "deve ser preenchido"
   validates_presence_of :especialidade, message: "deve ser preenchido"
@@ -18,10 +21,9 @@ class Restaurante < ActiveRecord::Base
   has_many :comentarios, as: :comentavel
 
 
-
   private
     def primeira_letra_deve_ser_maiuscula
-      errors.add(:nome, "primeira letra deve ser maiúscula") unless nome =~ /[A-Z].*/
+      errors.add("nome", "primeira letra deve ser maiúscula") unless nome =~ /[A-Z].*/
     end
 
 end

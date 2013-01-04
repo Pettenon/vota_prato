@@ -1,29 +1,34 @@
 <%= render partial: "titulo" %>
 
-<h1>Listagem de Restaurantes</h1>
-
-<table>
+<h1 align="center" class="titulo"><font>Restaurantes Cadastrados</font></h1>
+<table height="50%" width="80%" align="center" color="#000" >
 	<tr>
-		<th>Nome</th>
-		<th>Endereço</th>
-		<th>Especialidade</th>
+		<th><font color="black" size="6">Nome</font></th>
+		<th><font color="black" size="6">Endereço</font></th>
+		<th><font color="black" size="6">Especialidade</font></th>
+		<th colspan="3"><font color="black" size="6">Controle de Cadastros</font></th>
 	</tr>
 
 <% @restaurantes.each do |restaurante| %>
 
 	<tr>
 
-		<td><%= restaurante.nome %></td>
-		<td><%= restaurante.endereco %></td>
-		<td><%= restaurante.especialidade %></td>
-		<td><%= link_to 'Mostrar', action: 'show', id: restaurante %></td>
-		<td><%= link_to 'Editar', action: 'edit', id: restaurante %></td>
-		<td><%= link_to 'Deletar', action: 'destroy', id: restaurante %></td>
+		<td ><font color="grey" size="6"><%= restaurante.nome %></font></td>
+		<td ><font color="grey" size="6"><%= restaurante.endereco %></font></td>
+		<td ><font color="grey" size="6"><%= restaurante.especialidade %></font></td>
+		<td align="center"><font color="grey" size="6"><%= link_to 'Mostrar', action: 'show', id: restaurante %></font></td>
+		<td align="center"><font color="grey" size="6"><%= link_to 'Editar', action: 'edit', id: restaurante %></font></td>
+		<td align="center"><font color="grey" size="6"><%= link_to 'Deletar', action: 'destroy', id: restaurante %></font></td>
 	</tr>
 
 <% end %>
 
 </table>
 
+<%= paginate @restaurantes %>
+
 <br/>
+
 <%= link_to 'Novo', action: 'new' %>
+
+

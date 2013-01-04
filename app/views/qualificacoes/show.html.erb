@@ -20,8 +20,16 @@
   <%= @qualificacao.valor_gasto %>
 </p>
 
+<%= link_to "Nova qualificacao", :controller => 'qualificacoes', 
+:action => "new" 
+:cliente => @cliente %>
 
-<%= link_to 'Edit', edit_qualificacao_path(@qualificacao) %> |
-<%= link_to 'Back', qualificacoes_path %>
+<%= link_to 'Editar', edit_qualificacao_path(@qualificacao) %> |
+<%= link_to 'Voltar', qualificacoes_path %>
 
+
+<% unless @qualificacao.comentarios.empty?%>
 <%= comentarios @qualificacao %>
+<%end%>
+
+<%= novo_comentario(@qualificacao) %>

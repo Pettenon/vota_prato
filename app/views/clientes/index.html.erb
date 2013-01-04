@@ -1,9 +1,9 @@
-<h1>Listing clientes</h1>
+<h1 align="center">Clientes</h1>
 
-<table>
+<table class="tabelacor" align="center">
   <tr>
-    <th>Nome</th>
-    <th>Idade</th>
+    <th><font color="black" size="6">Nome</font></th>
+    <th><font color="black" size="6">Idade</font></th>
     <th></th>
     <th></th>
     <th></th>
@@ -11,16 +11,19 @@
 
 <% @clientes.each do |cliente| %>
   <tr>
-    <td><%= cliente.nome %></td>
-    <td><%= cliente.idade %></td>
-    <td><%= link_to 'Show', cliente %></td>
-    <td><%= link_to 'Edit', edit_cliente_path(cliente) %></td>
+    <td><font color="grey"><%= cliente.nome %></font></td>
+    <td><font color="grey"><%= cliente.idade %></font></td>
+    <td><font color="grey"><%= link_to 'Mostrar', cliente %></font></td>
+    <td><font color="grey"><%= link_to 'Editar', edit_cliente_path(cliente) %></font></td>
+    
 
     
   </tr>
 <% end %>
 </table>
 
+<%= paginate @clientes %>
+
 <br />
 
-<%= link_to 'New Cliente', new_cliente_path %>
+<%= link_to 'Novo Cliente', new_cliente_path %>
