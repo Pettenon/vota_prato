@@ -1,6 +1,10 @@
-<h1 align="center">Clientes</h1>
+<h1 align="center" class="titulo"><font color="DarkGoldenrod">Clientes</font></h1>
 
 <table class="tabelacor" align="center">
+  <br>
+  <br>
+  <br>
+
   <tr>
     <th><font color="black" size="6">Nome</font></th>
     <th><font color="black" size="6">Idade</font></th>
@@ -11,10 +15,10 @@
 
 <% @clientes.each do |cliente| %>
   <tr>
-    <td><font color="grey"><%= cliente.nome %></font></td>
-    <td><font color="grey"><%= cliente.idade %></font></td>
-    <td><font color="grey"><%= link_to 'Mostrar', cliente %></font></td>
-    <td><font color="grey"><%= link_to 'Editar', edit_cliente_path(cliente) %></font></td>
+    <td><font color="grey" size="6"><%= cliente.nome %></font></td>
+    <td><font color="grey" size="6"><%= cliente.idade %></font></td>
+    <td><font color="grey" size="6"><%= link_to 'Mostrar', cliente %></font></td>
+    <td><font color="grey" size="6"><%= link_to 'Editar', edit_cliente_path(cliente) %></font></td>
     
 
     
@@ -22,8 +26,16 @@
 <% end %>
 </table>
 
+<br>
+<br>
+<br>
+
+<font size="6" class="fonte">
 <%= paginate @clientes %>
+</font>
 
 <br />
 
+<font size="6" class="fonte">
 <%= link_to 'Novo Cliente', new_cliente_path %>
+</font>

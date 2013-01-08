@@ -1,7 +1,11 @@
 <%= render partial: "titulo" %>
 
-<h1 align="center" class="titulo"><font>Restaurantes Cadastrados</font></h1>
+<h1 align="center" class="titulo"><font color="DarkGoldenrod">Restaurantes Cadastrados</font></h1>
 <table height="50%" width="80%" align="center" color="#000" >
+	<br>
+	<br>
+	<br>
+
 	<tr>
 		<th><font color="black" size="6">Nome</font></th>
 		<th><font color="black" size="6">Endereço</font></th>
@@ -16,7 +20,7 @@
 		<td ><font color="grey" size="6"><%= restaurante.nome %></font></td>
 		<td ><font color="grey" size="6"><%= restaurante.endereco %></font></td>
 		<td ><font color="grey" size="6"><%= restaurante.especialidade %></font></td>
-		<td align="center"><font color="grey" size="6"><%= link_to 'Mostrar', action: 'show', id: restaurante %></font></td>
+		<td align="center"><font color="black" size="6"><%= link_to 'Mostrar', action: 'show', id: restaurante %></font></td>
 		<td align="center"><font color="grey" size="6"><%= link_to 'Editar', action: 'edit', id: restaurante %></font></td>
 		<td align="center"><font color="grey" size="6"><%= link_to 'Deletar', action: 'destroy', id: restaurante %></font></td>
 	</tr>
@@ -25,10 +29,21 @@
 
 </table>
 
+<br>
+<br>
+<br>
+<br>
+
+<y align="center" class="fonte">
 <%= paginate @restaurantes %>
+</y>
 
 <br/>
+<br>
+<br>
+<br>
 
-<%= link_to 'Novo', action: 'new' %>
-
+<font class="novo fonte" size="6">
+	<%= link_to 'Novo', action: 'new' %>
+</font>
 

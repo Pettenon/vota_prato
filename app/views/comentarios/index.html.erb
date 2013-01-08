@@ -1,27 +1,33 @@
-<h1>Listing comentarios</h1>
+<h1 size="6" align="center" class="titulo"><font color="DarkGoldenrod">Lista de Comentarios<font></h1>
 
-<table>
+<table align="center" width="80%">
+
+  <br>
+  <br>
+  <br>
+
   <tr>
-    <th>Conteudo</th>
-    <th>Comentavel</th>
-    <th>Comentavel type</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th><font size="6" color="black">Conteudo</font></th>
+    <th><font size="6" color="black">Comentavel</font></th>
+    <th><font size="6" color="black">Comentavel type</font></th>
   </tr>
 
 <% @comentarios.each do |comentario| %>
-  <tr>
-    <td><%= comentario.conteudo %></td>
-    <td><%= comentario.comentavel_id %></td>
-    <td><%= comentario.comentavel_type %></td>
-    <td><%= link_to 'Mostrar', comentario %></td>
-    <td><%= link_to 'Editar', edit_comentario_path(comentario) %></td>
-    <td><%= link_to 'Remover', comentario, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
+  <tr align="center">
+    <td><font size="6" color="grey"><%= comentario.conteudo %></font></td>
+    <td><font size="6" color="grey"><%= comentario.comentavel_id %></font></td>
+    <td><font size="6" color="grey"><%= comentario.comentavel_type %></font></td>
+    <td><font size="6" color="grey"><%= link_to 'Mostrar', comentario %></font></td>
+    <td><font size="6" color="grey"><%= link_to 'Editar', edit_comentario_path(comentario) %></font></td>
+    <td><font size="6" color="grey"><%= link_to 'Remover', comentario, method: :delete, data: { confirm: 'Você tem certeza?' } %></font></td>
   </tr>
 <% end %>
 </table>
 
-<br />
+<br>
+<br>
+<br>
 
+<font class="novo, fonte" size="6">
 <%= link_to 'New Comentario', new_comentario_path %>
+</font>

@@ -13,7 +13,7 @@ body {
 
 p {
   font-family: verdana;
-  font-size: 13px;
+  font-size: 30px;
   line-height: 18px;
   font-color: black;
 }
@@ -33,6 +33,13 @@ ul {
   font-color: black;
 }
 
+y {
+  ont-family: verdana;
+  font-size: 27px;
+  line-height: 18px;
+  font-color: black;
+}
+
 td {
   font-family: sans-serif;
   font-size: 20px;
@@ -47,13 +54,16 @@ pre {
 }
 
 a {
-  color: #0f0f0f;
+  color: #300;
+  text-decoration: none;
   &:visited {
     color: #300;
+    text-decoration: none;
   }
   &:hover {
     color: #fff;
-    background-color: #000;
+    background: rgba(255, 255, 255, 0);
+    text-decoration: none;
   }
 }
 
@@ -80,6 +90,8 @@ div {
   padding-bottom: 0;
   margin-bottom: 20px;
   background-color: #f0f0f0;
+
+
   h2 {
     text-align: left;
     font-weight: bold;
@@ -101,10 +113,29 @@ table {
   background:rgba(255,1,1,0)
 }
 
+
 .titulo {
-  padding-top: 150px;
+  padding-top: 100px;
 }
 
+
 .titulo2 {
-  padding-top: 100px
+  padding-top: 50px
+}
+
+
+.novo {
+   padding-left: 1540px;
+}
+
+
+.z1 {
+  text-decoration: none;
+
+}
+.z1:houver {
+  background: black;
+}
+.fonte {
+  color: white;
 }
