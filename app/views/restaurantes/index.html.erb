@@ -1,25 +1,25 @@
 <%= render partial: "titulo" %>
 
-<h1 align="center" class="titulo"><font color="DarkGoldenrod">Restaurantes Cadastrados</font></h1>
+<h1 align="center" class="titulo"><font color="#9B1C26">Restaurantes Cadastrados</font></h1>
 <table height="50%" width="80%" align="center" color="#000" >
 	<br>
 	<br>
 	<br>
 
 	<tr>
-		<th><font color="black" size="6">Nome</font></th>
-		<th><font color="black" size="6">Endereço</font></th>
-		<th><font color="black" size="6">Especialidade</font></th>
-		<th colspan="3"><font color="black" size="6">Controle de Cadastros</font></th>
+		<th><font color="#9B1C26" size="6">Nome</font></th>
+		<th><font color="#9B1C26" size="6">Endereço</font></th>
+		<th><font color="#9B1C26" size="6">Especialidade</font></th>
+		<th colspan="3"><font color="#9B1C26" size="6">Controle de Cadastros</font></th>
 	</tr>
 
 <% @restaurantes.each do |restaurante| %>
 
 	<tr>
 
-		<td ><font color="grey" size="6"><%= restaurante.nome %></font></td>
-		<td ><font color="grey" size="6"><%= restaurante.endereco %></font></td>
-		<td ><font color="grey" size="6"><%= restaurante.especialidade %></font></td>
+		<td ><font color="darkgrey" size="6"><%= restaurante.nome %></font></td>
+		<td ><font color="darkgrey" size="6"><%= restaurante.endereco %></font></td>
+		<td ><font color="darkgrey" size="6"><%= restaurante.especialidade %></font></td>
 		<td align="center"><font color="black" size="6"><%= link_to 'Mostrar', action: 'show', id: restaurante %></font></td>
 		<td align="center"><font color="grey" size="6"><%= link_to 'Editar', action: 'edit', id: restaurante %></font></td>
 		<td align="center"><font color="grey" size="6"><%= link_to 'Deletar', action: 'destroy', id: restaurante %></font></td>
@@ -38,12 +38,15 @@
 <%= paginate @restaurantes %>
 </y>
 
-<br/>
+<br>
+<br>
+<br>
 <br>
 <br>
 <br>
 
-<font class="novo fonte" size="6">
-	<%= link_to 'Novo', action: 'new' %>
+<font class="novo" size="6">
+	<!--<%= link_to 'Novo', action: 'new' %>-->
+
+<a class="bt" href="http://localhost:3000/restaurantes/new" title="Novo Restaurante"><font color="white">Novo Restaurante</font></a>	
 </font>
-

@@ -4,8 +4,8 @@
   
   
  <title>Programa de Qualificação de Restaurantes	</title>
- <h1 align="center" class="titulo2"><font color="DarkGoldenrod"> Controle de Restaurantes</font></h1>
-   <%= stylesheet_link_tag "scaffold" %>
+ 
+    <%= stylesheet_link_tag "scaffold" %>
  
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
@@ -13,16 +13,23 @@
 </head>
 <body>
 
-  <br>
-  <br>
-  
-  <table width="80%" align="center">
-  	<tr>
-  		<td><a href="http://localhost:3000/restaurantes" class="z1"><font size="6" color="#300">Restaurantes</font></td>
-  		<td><a href="http://localhost:3000/comentarios" class="z1"><font size="6" color="#300">Coment&aacute;rios</font></td>
-  		<td class="image"><a href="http://localhost:3000/clientes" class="z1"><font size="6" color="#300">Cliente</font></td>
-  	 <td align="center"><a href="http://localhost:3000/qualificacoes" class="z1"><font size="6" color="#300">Qualificac&otilde;es</font></td>
+
+<table width="100%">
+    <tr>
+      <td bgcolor="black" witdh="100%">
+    <ul id="nav">
+    
+    <li><a href="http://localhost:3000/restaurantes">Restaurantes</a></li>
+    <li><a href="http://localhost:3000/comentarios">Comentários</a></li>
+    <li><a href="http://localhost:3000/clientes">Clientes</a></li>
+    <li><a href="http://localhost:3000/qualificacoes">Qualificação</a></li>
+    </ul>
+      </td>
+    </tr>
   </table>
+  
+  
+  
 
 <%= yield %>
 

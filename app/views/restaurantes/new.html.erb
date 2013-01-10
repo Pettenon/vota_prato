@@ -1,7 +1,6 @@
 <%= render partial: "titulo" %>
 
-<h1>Adicionando Restaurante</h1>
-
+<h1 align="center"><font color="DarkGoldenrod">Adicionando Restaurante</font></h1>
 <% if @restaurante.errors.any? %>
 	<ul>
 	<% @restaurante.errors.full_messages.each do |msg| %>
@@ -11,6 +10,15 @@
 <% end %>
 
 <!-- Adicionar arquivo no cadastro de restaurante-->
+
+<br>
+<br>
+<br>
+
+<table align="center">
+	<tr align="center">
+		<td align="center">
+			<font size="5">
 <%= form_for :restaurantes, :url => {:action => 'create'}, :html => {:multipart => true} do |f| %>
 
 <%= f.file_field :foto%>
@@ -22,5 +30,17 @@
 	Especialidade: <%= f.text_field :especialidade %><br/>
 	<%= submit_tag 'Criar' %>
 <% end %>
+</font>
+</td>
+</tr>
+</table>
 
+<br>
+<br>
+<br>
+
+<table>
+	<font size="6">
 <%= link_to 'Voltar', {action: 'index' } %>
+	</font>
+</table>

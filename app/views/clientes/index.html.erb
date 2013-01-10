@@ -1,4 +1,4 @@
-<h1 align="center" class="titulo"><font color="DarkGoldenrod">Clientes</font></h1>
+<h1 align="center" class="titulo"><font color="#9B1C26">Clientes</font></h1>
 
 <table class="tabelacor" align="center">
   <br>
@@ -6,8 +6,8 @@
   <br>
 
   <tr>
-    <th><font color="black" size="6">Nome</font></th>
-    <th><font color="black" size="6">Idade</font></th>
+    <th><font color="#9B1C26" size="6">Nome</font></th>
+    <th><font color="#9B1C26" size="6">Idade</font></th>
     <th></th>
     <th></th>
     <th></th>
@@ -29,13 +29,22 @@
 <br>
 <br>
 <br>
+<br>
 
-<font size="6" class="fonte">
+<y align="center" class="fonte">
 <%= paginate @clientes %>
-</font>
+</y>
 
-<br />
 
-<font size="6" class="fonte">
-<%= link_to 'Novo Cliente', new_cliente_path %>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<font class="novo" size="6">
+  <!--<%= link_to 'Novo', action: 'new' %>-->
+
+<a class="bt" href="http://localhost:3000/clientes/new" title="Novo Cliente"><font color="white">Novo Cliente</font></a>  
 </font>
