@@ -1,44 +1,63 @@
 <%= render partial: "titulo" %>
 
 <h1 align = "center" class="titulo"><font color="#9B1C26">Exibindo Restaurante</font></h1>
-	<p >
-		<b>Nome: </b>
-			<%= @restaurante.nome %>
-	</p>
 
-	<p >
-		<y align = "center">Endereço: </y>
-			<%= @restaurante.endereco %>
-	</p>
+<table align="center">
+	<tr align="center">
+		<td align="left">
+			<font size="5" >
+				<p>
+					<font color="darkgrey">
+						<b>Nome: </b>
+						<%= @restaurante.nome %>
+					</font>
+				</p>
 
-	<p>
-		<y align = "center">Especialidade: </y>
-	<%= @restaurante.especialidade %>
-	</p>
+				<p >
+					<y align = "center">Endereço: </y>
+						<%= @restaurante.endereco %>
+				</p>
 
-	<y>Nota Média: </y>
-		<%= @restaurante.qualificacoes.average(:nota) %></br>
-	<y>Qualificações: </y>
-		<%= @restaurante.qualificacoes.count %></br>
-	<y>Preço médio: </y>
-		<%= @restaurante.qualificacoes.average(:valor_gasto) %></br></br>
+				<p>
+					<y align = "center">Especialidade: </y>
+				<%= @restaurante.especialidade %>
+				</p>
 
-	<!--Mostrar imagem-->
-	<!--
-	<p>
-		<b>Foto:</b>
-		<%= image_tag @restaurante.foto.url(:thumb) %>
-	</p>
-	-->
+				<y>Nota Média: </y>
+					<%= @restaurante.qualificacoes.average(:nota) %></br>
+				<y>Qualificações: </y>
+					<%= @restaurante.qualificacoes.count %></br>
+				<y>Preço médio: </y>
+					<%= @restaurante.qualificacoes.average(:valor_gasto) %></br></br>
 
-<b>
-<%= link_to "Qualificar este restaurante", :controller => "qualificacoes", :action => "new", :restaurante => @restaurante %>
+				Mostrar imagem
+				
+				<p>
+					<b>Foto:</b>
+					<%= image_tag @restaurante.foto.url(:thumb) %>
+				</p>
+				
+
+				<b>
+
+				<%= link_to "Qualificar este restaurante", :controller => "qualificacoes", :action => "new", :restaurante => @restaurante %>
 
 
-<%= link_to 'Editar', action: 'edit', id: @restaurante %>
-<%= link_to 'Voltar', action: 'index' %>
-</b>
+				<%= link_to 'Editar', action: 'edit', id: @restaurante %>
+				<%= link_to 'Voltar', action: 'index' %>
+				</b>
 
-<% unless @restaurante.comentarios.empty?%>
-<%= comentarios @restaurante %>
-<%end%>
+				<% unless @restaurante.comentarios.empty?%>
+				<%= comentarios @restaurante %>
+				<%end%>
+				
+			</font>
+		</td>
+	</tr>
+</table>
+
+<font class="novo" size="6">
+	<s class="bt" title="Novo Comentário" style="text-decoration:none">
+		<font color="white"><%= novo_comentario(@restaurante) %></font>
+	</s>
+</font>

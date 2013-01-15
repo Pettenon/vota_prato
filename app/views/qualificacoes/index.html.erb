@@ -1,6 +1,4 @@
-
-
-<h1 class="titulo" align="center"><font color="#9B1C26">Lista de Qualificac&otilde;es</h1>
+<h1 class="titulo" align="center"><font color="#9B1C26">Lista de Qualificacoes</h1>
 
 <table align="center" width="80%">
  
@@ -34,10 +32,10 @@
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
+<y align="center" class="fonte">
+<center><%= paginate @qualificacoes %>
+</y>
+
 <br>
 <br>
 <br>
@@ -50,5 +48,9 @@
 <font class="novo" size="6">
   <!--<%= link_to 'Novo', action: 'new' %>-->
 
-<a class="bt" href="http://localhost:3000/qualificacoes/new" title="Nova Qualificação"><font color="white">Nova Qualificação</font></a>  
+<a class="bt" href="http://localhost:3000/qualificacoes/new" title="Nova Qualificação">
+  <font color="white">Nova Qualificação</font>
+</a>  
 </font>
+
+

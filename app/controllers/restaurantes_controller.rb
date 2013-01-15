@@ -41,14 +41,6 @@ class RestaurantesController < ApplicationController
 		redirect_to(action: "index")
 	end
 
-	def update
-		@restaurante = Restaurantes.find(params[:id])
-		if @restaurante.update_attributes(params[:restaurante])
-			redirect_to(action: "show", id: @restaurante)
-		else
-			render action: "edit"
-		end
-	end
 	def busca
 		@restaurante = Restaurante.find_by_nome(params[:nome])
 		if @restaurante

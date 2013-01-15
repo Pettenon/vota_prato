@@ -1,17 +1,39 @@
 <p id="notice"><%= notice %></p>
 
+<table align="center" class="titulo2">
+	<tr>
+		<td align="center">
+			<font size="6">
 <p>
-  <b>Nome:</b>
-  <%= @cliente.nome %>
+  <b><font color="#9B1C26">Nome:</font></b>
+  <font color="grey"><%= @cliente.nome %></font>
 </p>
 
 <p>
-  <b>Idade:</b>
-  <%= @cliente.idade %>
+  <b><font color="#9B1C26">Idade:</font></b>
+  	<font color="grey"><%= @cliente.idade %></font>
 </p>
 
+			</font>
+		</td>
+	</tr>
+</table>
+	
+<table align="center" class="titulo2">
+	<tr>
+		<td align="center">
+			<font size=6>
 <%= link_to "Nova qualificação", :controller => "qualificacoes", :action => "new", :cliente => @cliente %>
+			</font>
+		</td>
+	</tr>
+</table>
 
-
+<table align="center" class="titulo2">
+	<td align="center">
+		<font size="6">
 <%= link_to 'Editar', edit_cliente_path(@cliente) %> |
 <%= link_to 'Voltar', clientes_path %>
+		</font>
+	</td>
+</table>

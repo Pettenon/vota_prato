@@ -1,20 +1,32 @@
 <p id="notice"><%= notice %></p>
-
+<table align="center" class="titulo">
+	<tr>
+		<td>
+			<font size="6">
 <p>
-  <b>Conteudo:</b>
-  <%= @comentario.conteudo %>
+  <b><font color="#9B1C26">Comet&aacute;rio:</font></b>
+  <font color="grey"><%= @comentario.conteudo %></font>
 </p>
 
 <p>
-  <b>Comentavel:</b>
-  <%= @comentario.comentavel_id %>
+  <b><font color="#9B1C26">Nome do Restaurante:</font></b>
+  <font color="grey"><%= @comentario.comentavel_id %></font>
 </p>
 
 <p>
-  <b>Comentavel type:</b>
-  <%= @comentario.comentavel_type %>
+  <b><font color="#9B1C26">Tipo de Coment&aacute;rio:</font></b>
+  <font color="grey"><%= @comentario.comentavel_type %></font>
 </p>
+			</font>
+		</td>
+	</tr>
+</table>
 
-
+<table align="center" class="titulo2">
+	<td>
+		<font size="6">
 <%= link_to 'Editar', edit_comentario_path(@comentario) %> |
 <%= link_to 'Voltar', comentarios_path %>
+		</font>
+	</td>
+</table>

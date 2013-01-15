@@ -1,35 +1,65 @@
 <p id="notice"><%= notice %></p>
 
+<table align="center">
+	<tr>
+		<td>
+			<font size="6">
 <p>
-  <b>Cliente:</b>
-  <%= @qualificacao.cliente_id %>
+  <b><font color="#9B1C26">Cliente:</font></b>
+  <font color="grey"><%= @qualificacao.cliente_id %></font>
 </p>
 
 <p>
-  <b>Restaurante:</b>
-  <%= @qualificacao.restaurante_id %>
+  <b><font color="#9B1C26">Restaurante:</font></b>
+  <font color="grey"><%= @qualificacao.restaurante_id %></font>
 </p>
 
 <p>
-  <b>Nota:</b>
-  <%= @qualificacao.nota %>
+  <b><font color="#9B1C26">Nota:</font></b>
+  <font color="grey"><%= @qualificacao.nota %></font>
 </p>
 
 <p>
-  <b>Valor gasto:</b>
-  <%= @qualificacao.valor_gasto %>
+  <b><font color="#9B1C26">Valor gasto:</font></b>
+  <font color="grey"><%= @qualificacao.valor_gasto %></font>
 </p>
+			</font>
+		</td>
+	</tr>
+</table>
 
+<table align="center" class="titulo2">
+	<tr>
+		<td>
+			<font size="6">
 <%= link_to "Nova qualificacao", :controller => 'qualificacoes', 
-:action => "new" 
+:action => "new",
 :cliente => @cliente %>
+			</font>
+		</td>
+	</tr>
+</table>
 
+<table align="center" class="titulo2">
+	<tr>
+		<td>
+			<font size="6" style="text-decoration:none">
+<%= novo_comentario(@qualificacao) %>
+			</font>
+		</td>
+	</tr>
+</table>
+
+<table align="center" class="titulo2">
+	<td>
+		<font size="6">
 <%= link_to 'Editar', edit_qualificacao_path(@qualificacao) %> |
 <%= link_to 'Voltar', qualificacoes_path %>
+		</font>
+	</td>
+</table>
 
 
 <% unless @qualificacao.comentarios.empty?%>
 <%= comentarios @qualificacao %>
 <%end%>
-
-<%= novo_comentario(@qualificacao) %>

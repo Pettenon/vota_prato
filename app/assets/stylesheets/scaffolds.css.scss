@@ -33,11 +33,38 @@ ul {
   font-color: black;
 }
 
+s a {
+  color: white;
+  size: 6pt;
+  text-decoration: none;
+    &:visited {
+    color: #fff;
+    text-decoration: none;
+    }
+    &:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0);
+    text-decoration: none;
+    }
+}
+
+
 y {
-  ont-family: verdana;
+  font-family: verdana;
   font-size: 27px;
   line-height: 18px;
   font-color: black;
+  text-decoration: none;
+    &:visited {
+      color: #000;
+      text-decoration: none;
+    }
+    &:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0);
+      text-decoration: none;
+    }
+
 }
 
 td {
@@ -125,7 +152,7 @@ table {
 
 
 .novo {
-   padding-left: 1360px;
+   padding-left: 1170px;
 }
 
 
@@ -181,8 +208,7 @@ table {
   -o-border-image: url(img/bcom1.png) 10 stretch;
 }
 
-.bt {
-
+.bt { 
   display: inline-block;
   height:auto;
   padding: 20px 20px;
@@ -190,14 +216,15 @@ table {
   border:1px solid #000;
   border-top-color:#000;
   border-bottom-color:#000;
-  color:#fff;
+  color: #fff;
   background:#000;
-  -webkit-border-radius: 5px;
-  -khtml-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-border-radius: 0px;
+  -khtml-border-radius: 0px;
+  border-radius: 0px;
   -moz-box-shadow: 0 2px 3px rgba(0,0,0,.2);
   -webkit-box-shadow: 0 2px 3px rgba(0,0,0,.2);
 }
+
 .bt:hover {
   background:#9B1C26;
 }

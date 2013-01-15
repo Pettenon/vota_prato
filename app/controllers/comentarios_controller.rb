@@ -2,7 +2,8 @@ class ComentariosController < ApplicationController
   # GET /comentarios
   # GET /comentarios.json
   def index
-    @comentarios = Comentario.all
+    @comentarios = Comentario.order("conteudo").page(params['page']).per(5)
+
 
     respond_to do |format|
       format.html # index.html.erb
@@ -27,7 +28,7 @@ class ComentariosController < ApplicationController
     @comentario = Comentario.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html #{redirect_to @comentario} # new.html.erb
       format.json { render json: @comentario }
     end
   end
@@ -41,15 +42,16 @@ class ComentariosController < ApplicationController
   # POST /comentarios.json
   def create
     @comentario = Comentario.new(params[:comentario])
-
     respond_to do |format|
-      if @comentario.save
-        format.xml { render :xml => @comentario, :status => :created, :location => @comentario }
-        format.js
-      else
+      @comentario.save
+      format.html {redirect_to @comentario, notice: 'Comentario postado'}
+      format.xml {render :xml => @comentario, :status => :created, :location => @comentario }
+      format.js
+      
         #format.html { render action: "new" }
         #format.json { render json: @comentario.errors, status: :unprocessable_entity }
-      end
+
+      
     end
   end
 
@@ -74,10 +76,11 @@ class ComentariosController < ApplicationController
   def destroy
     @comentario = Comentario.find(params[:id])
     @comentario.destroy
-
     respond_to do |format|
-      format.xml { head :ok }
-      format.js { head :ok }
+      format.html {redirect_to @comentario, notice: 'Comentario deletado'}
+      format.xml {head :ok }
+      format.js {head :ok }
+      
     end
   end
 end
