@@ -18,13 +18,13 @@
 
 <% @qualificacoes.each do |qualificacao| %>
   <tr>
-    <td align="center"><font color="grey" size="6"><%= qualificacao.cliente.nome %></td>
-    <td align="center"><font color="grey" size="6"><%= qualificacao.restaurante.nome %></td>
-    <td align="center"><font color="grey" size="6"><%= qualificacao.nota %></td>
-    <td align="center"><font color="grey" size="6"><%= qualificacao.valor_gasto %></td>
-    <td align="center"><font color="grey" size="6"><%= link_to 'Mostrar', qualificacao %></td>
-    <td align="center"><font color="grey" size="6"><%= link_to 'Editar', edit_qualificacao_path(qualificacao) %></td>
-    <td align="center"><font color="grey" size="6"><%= link_to 'Remover', qualificacao, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
+    <td><font color="darkgrey" size="6"><%= qualificacao.cliente.nome %></td>
+    <td align="center"><font color="darkgrey" size="6"><%= qualificacao.restaurante.nome %></td>
+    <td align="center"><font color="darkgrey" size="6"><%= qualificacao.nota %></td>
+    <td align="center"><font color="darkgrey" size="6"><%= qualificacao.valor_gasto %></td>
+    <td align="center"><font color="darkgrey" size="6"><%= link_to 'Mostrar', qualificacao %></td>
+    <td align="center"><font color="darkgrey" size="6"><%= link_to 'Editar', edit_qualificacao_path(qualificacao) %></td>
+    <td align="center"><font color="darkgrey" size="6"><%= link_to 'Remover', qualificacao, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
   </tr>
 <% end %>
 </table>

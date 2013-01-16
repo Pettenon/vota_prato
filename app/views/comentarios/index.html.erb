@@ -16,12 +16,12 @@
   <tr align="center">
 
     
-    <td><font size="6" color="grey"><%= comentario.conteudo %></font></td>
-    <td><font size="6" color="grey"><%= comentario.comentavel_id %></font></td>
-    <td><font size="6" color="grey"><%= comentario.comentavel_type %></font></td>
-    <td><font size="6" color="grey"><%= link_to 'Mostrar', comentario %></font></td>
-    <td><font size="6" color="grey"><%= link_to 'Editar', edit_comentario_path(comentario) %></font></td>
-    <td><font size="6" color="grey"><%= link_to 'Remover', comentario, method: :delete, data: { confirm: 'Você tem certeza?' } %></font></td>
+    <td><font size="6" color="darkgrey"><%= comentario.conteudo %></font></td>
+    <td><font size="6" color="darkgrey"><%= comentario.comentavel_id %></font></td>
+    <td><font size="6" color="darkgrey"><%= comentario.comentavel_type %></font></td>
+    <td><font size="6" color="darkgrey"><%= link_to 'Mostrar', comentario %></font></td>
+    <td><font size="6" color="darkgrey"><%= link_to 'Editar', edit_comentario_path(comentario) %></font></td>
+    <td><font size="6" color="darkgrey"><%= link_to 'Remover', comentario, method: :delete, data: { confirm: 'Você tem certeza?' } %></font></td>
   </tr>
 <% end %>
 </table>

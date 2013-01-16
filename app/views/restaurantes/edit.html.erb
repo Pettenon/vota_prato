@@ -16,13 +16,27 @@
 <table align="center">
 	<tr >
 		<td >
-			<font size="5">
+			<font size="6">
 				<%= form_for :restaurante, url: {action: 'update', id: @restaurante}, :html => {:multipart => true} do |f| %>
-					Nome: <%= f.text_field :nome %><br/>
-					Endereço: <%= f.text_field :endereco %><br/>
-					Especialidade: <%= f.text_field :especialidade %><br/>
-					Foto: <%= f.file_field :foto %><br/>
+					
+						<font size="6" color="darkgrey">Nome: </font>
+						<%= f.text_field :nome %><br/>
+					
+					<br>
 
+						<font size="6" color="darkgrey">Endereço: </font>
+						<%= f.text_field :endereco %><br/>
+					
+					<br>
+
+						<font size="6" color="darkgrey">Especialidade: </font>
+						<%= f.text_field :especialidade %><br/>
+					
+					<br>
+
+						<font size="6" color="darkgrey">Foto: </font>
+						<%= f.file_field :foto %><br/>
+					
 					<br>
 					<br>
 					

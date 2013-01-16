@@ -11,18 +11,24 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :conteudo %><br />
+  <div class="field" size="6">
+    <font color="darkgrey"><%= f.label :conteudo %><br /></font>
     <%= f.text_area :conteudo %>
   </div>
-  <div class="field">
-    <%= f.label :comentavel_id %><br />
+
+
+  <div class="field" size="6">
+    <font color="darkgrey"><%= f.label :comentavel_id %><br /></font>
     <%= f.number_field :comentavel_id %>
   </div>
-  <div class="field">
-    <%= f.label :comentavel_type %><br />
+
+
+  <div class="field" size="6">
+   <font color="darkgrey"> <%= f.label :comentavel_type %><br /></font>
     <%= f.text_field :comentavel_type %>
   </div>
+
+
   <div class="actions">
     <%= f.submit %>
   </div>

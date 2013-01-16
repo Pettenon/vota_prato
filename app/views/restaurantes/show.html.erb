@@ -5,59 +5,87 @@
 <table align="center">
 	<tr>
 		<td align="left">
-			<font size="5" >
+			<font size="6" >
 				<p>
-					<font color="darkgrey">
-						<b>Nome: </b>
+					<font color="darkgrey" size="6">
+						<b><font color="#9b1c26">Nome: </font></b>
 						<%= @restaurante.nome %>
 					</font>
 				</p>
 
 				<p >
-					<y>Endereço: </y>
+					<font color="darkgrey" size="6">
+						<b><font color="#9b1c26">Endereço: </font></b>
 						<%= @restaurante.endereco %>
+					</font>
 				</p>
 
 				<p>
-					<y>Especialidade: </y>
-				<%= @restaurante.especialidade %>
+					<font color="darkgrey" size="6">
+						<b><font color="#9b1c26">Especialidade: </font></b>
+						<%= @restaurante.especialidade %>
+					</font>
 				</p>
 
-				<y>Nota Média: </y>
-					<%= @restaurante.qualificacoes.average(:nota) %></br>
-				<y>Qualificações: </y>
-					<%= @restaurante.qualificacoes.count %></br>
-				<y>Preço médio: </y>
-					<%= @restaurante.qualificacoes.average(:valor_gasto) %></br></br>
+				<p>
+					<font color="darkgrey" size="6">
+						<b><font color="#9b1c26">Nota Média: </font></b>
+						<%= @restaurante.qualificacoes.average(:nota) %></br>
+					</font>
+				</p>	
 
-				Mostrar imagem
+				<p>
+					<font color="darkgrey" size="6">
+						<b><font color="#9b1c26">Qualificações: </font></b>
+						<%= @restaurante.qualificacoes.count %></br>
+					</font>
+				</p>
+
+				<p>
+					<font color="darkgrey" size="6">
+						<b><font color="#9b1c26">Preço médio: </font></b>
+						<%= @restaurante.qualificacoes.average(:valor_gasto) %></br>
+					</font>
+				</p>
+
 				
 				<p>
-					<b>Foto:</b>
+					<font color="#9b1c26" size="6">
+						<b>Foto:</b>
+					</font>
+				</p>
+
+				<p align="center">
 					<%= image_tag @restaurante.foto.url(:thumb) %>
 				</p>
-				
 
 				<b>
-
 				<%= link_to "Qualificar este restaurante", :controller => "qualificacoes", :action => "new", :restaurante => @restaurante %>
-
 
 				<%= link_to 'Editar', action: 'edit', id: @restaurante %>
 				<%= link_to 'Voltar', action: 'index' %>
 				</b>
 
-				<% unless @restaurante.comentarios.empty?%>
-				<%= comentarios @restaurante %>
-				<%end%>
-				
+				<font size="6" color="#9B1C26">
+					<% unless @restaurante.comentarios.empty?%>
+					<%= comentarios @restaurante %>
+					<%end%>
+				</font>
+
 			</font>
 		</td>
 	</tr>
 </table>
+
+<br>
+<br>
 
 <font class="novo" size="6">
 	<s class="bt" title="Novo Comentário" style="text-decoration:none">
 		<font color="white"><%= novo_comentario(@restaurante) %></font>
 	</s>
 </font>
+
+<br>
+<br>
+<br>

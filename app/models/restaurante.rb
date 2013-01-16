@@ -4,7 +4,7 @@ class Restaurante < ActiveRecord::Base
   attr_accessible :nome, :endereco, :especialidade, :foto
 
     validates_attachment_content_type :foto, :content_type => ["image/bmp", "image/x-png", "image/pjpeg","image/jpeg", "image/png", "image/gif"]
-    has_attached_file :foto, :styles => { :medium => "300x300", :thumb => "100x100"}
+    has_attached_file :foto, :styles => { :medium => "600x600", :thumb => "300x300"}
 
   validates_presence_of :nome, message: "deve ser preenchido"
   validates_presence_of :endereco, message: "deve ser preenchido"
