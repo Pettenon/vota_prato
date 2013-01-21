@@ -1,8 +1,6 @@
 VotaPrato::Application.routes.draw do
 
-
-
-
+  
   devise_for :users
 
   resources :comentarios

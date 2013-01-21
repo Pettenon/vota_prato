@@ -17,21 +17,35 @@
 <table width="100%"><img src="" align="center">
     <tr>
       <td bgcolor="black" witdh="100%">
+
     <ul id="nav">
     
     <li><a href="http://localhost:3000/restaurantes">Restaurantes</a></li>
     <li><a href="http://localhost:3000/comentarios">Comentários</a></li>
     <li><a href="http://localhost:3000/clientes">Clientes</a></li>
     <li><a href="http://localhost:3000/qualificacoes">Qualificação</a></li>
+
     </ul>
       </td>
     </tr>
+
   </table>
   
-  
-  
-
+  <k align="right">
+    <div id="user_nav">
+      <% if user_signed_in? %>
+        Signed in as <%= current_user.email %>. Not you?
+        <%= link_to "Sair", destroy_user_session_path, :method => :delete %>
+      <% else %>
+        <%= link_to "Cadastre-se", new_user_registration_path %> or <%= link_to "Fazer Login", new_user_session_path %>
+      <% end %>
+    </div>
+  </k>
+    
 <%= yield %>
+<script type="text/javascript">
+<%= yield :js%>
+</script>
 
 </body>
 </html>

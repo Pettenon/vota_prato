@@ -1,5 +1,8 @@
 #encoding:utf-8
 class RestaurantesController < ApplicationController
+
+	 before_filter :authenticate_user!, :except => [:index,:show]
+	 
 	def index
 		@restaurantes = Restaurante.order("nome").page(params['page']).per(5)
 	end
